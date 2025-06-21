@@ -90,8 +90,8 @@ export default function SendMessage() {
     completion,
     isLoading: isSuggestLoading,
     error,
-    stop,
-    complete,
+    // stop,
+    // complete,
   } = useCompletion({ api: '/api/suggest-messages', initialCompletion: initialMessageString });
 
   // const fetchSuggestedMessages = async() => {
