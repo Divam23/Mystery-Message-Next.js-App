@@ -1,36 +1,95 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+🕵️‍♂️ Mystery Message
 
-## Getting Started
+A modern, anonymous social messaging platform built with Next.js, MongoDB, and OpenAI. Inspired by Qooh.me — this app allows users to create public message boards and receive anonymous questions or thoughts, with AI-generated message suggestions to spark interaction.
 
-First, run the development server:
+🌐 Live Demo
+https://mystery-message.vercel.app
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+📸 Features
+- ✅ User Authentication via NextAuth
+- ✅ Anonymous message sending
+- ✅ AI-generated question suggestions using OpenAI
+- ✅ User dashboard to view/delete received messages
+- ✅ Mobile responsive UI with Tailwind CSS
+- ✅ Toast notifications and loading states
+- ✅ REST API routes for CRUD operations
+- ✅ Vercel deployment ready
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🧰 Tech Stack
+- Next.js (React framework with App Router)
+- MongoDB (via Mongoose)
+- NextAuth.js (Authentication)
+- OpenAI API (AI-generated messages)
+- Tailwind CSS (UI Styling)
+- Axios (API requests)
+- ShadCN/ui (Pre-built components)
+- Vercel (Hosting)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+🚀 Getting Started
+1. Clone the repo
+   git clone https://github.com/yourusername/mystery-message.git
+   cd mystery-message
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. Install dependencies
+   npm install
 
-## Learn More
+3. Set up environment variables
+   Create a `.env.local` file:
 
-To learn more about Next.js, take a look at the following resources:
+   MONGODB_URI=your-mongodb-connection-string
+   NEXTAUTH_SECRET=your-secret
+   NEXTAUTH_URL=http://localhost:3000
+   OPENAI_API_KEY=your-openai-api-key
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. Run locally
+   npm run dev
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   Visit: http://localhost:3000
 
-## Deploy on Vercel
+🛠 Project Structure
+/
+├── app/
+│   ├── api/
+│   │   ├── send-message/
+│   │   ├── suggest-messages/
+│   │   ├── delete-message/[messageid]/
+│   │   └── get-messages/
+│   ├── [username]/page.tsx
+│   ├── dashboard/page.tsx
+│   ├── sign-up/
+│   └── login/
+├── components/
+│   ├── MessageCard.tsx
+│   ├── FormUI.tsx
+│   ├── Toast.tsx
+│   └── ...other components...
+├── lib/
+│   ├── dbConnect.ts
+│   └── authOptions.ts
+├── schemas/
+│   └── message.schema.ts
+├── public/
+│   └── ...static assets...
+├── styles/
+│   └── ...global styles...
+├── .env.local
+├── package.json
+└── README.md
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+🧠 AI Integration
+Uses @ai-sdk/openai and @ai-sdk/react to stream suggested messages with a predefined prompt.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+📦 Deployment (Vercel)
+1. Push your code to GitHub
+2. Import repo into Vercel
+3. Set environment variables
+4. Deploy 🎉
+
+
+💬 Acknowledgements
+- Next.js
+- MongoDB Atlas
+- NextAuth.js
+- OpenAI
+- ShadCN UI
+- Chai aur Code (Youtube)
