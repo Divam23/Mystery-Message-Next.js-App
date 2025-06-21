@@ -2,9 +2,6 @@
 
 A modern, anonymous social messaging platform built with Next.js, MongoDB, and OpenAI. Inspired by Qooh.me — this app allows users to create public message boards and receive anonymous questions or thoughts, with AI-generated message suggestions to spark interaction.
 
-🌐 Live Demo
-https://mystery-message.vercel.app
-
 📸 Features
 - ✅ User Authentication via NextAuth
 - ✅ Anonymous message sending
